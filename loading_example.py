@@ -7,6 +7,8 @@ import tensorflow as tf
 from PIL import Image
 import io
 import numpy as np
+import matplotlib.pyplot as plt 
+from PIL import Image
 
 def parse_example(example_proto):
     """Parse a TFRecord example containing question, image, answer, and metadata."""
@@ -57,13 +59,22 @@ def main():
         print(f"Ground Truth Answer: {answer}")
         print(f"Number of images: {len(images_encoded)}")
         print(f"Visual indices: {visual_indices}")
+
+       
         
         # Display image dimensions for each image
         for j, img_encoded in enumerate(images_encoded):
             # Decode the image tensor
             img_tensor = tf.io.decode_image(img_encoded).numpy()
-            print(f"  Image {j+1} dimensions: {img_tensor.shape}")
-        
+
+            # TO DO : display the image used in the example
+            plt.imshow(img_tensor)
+            plt.title(f" Example {i+1} - Image {j+1}") 
+            plt.axis('off')
+            plt.show()
+
+            print(f" Image {j+1} dimensions: {img_tensor.shape}")
+
         print("-" * 50)
 
 if __name__ == "__main__":
