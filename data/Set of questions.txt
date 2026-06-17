@@ -4,7 +4,7 @@ Q1: If the robot gripper picks up the L shaped metal object, what color arrow sh
 Answer: A
 Question type : Trajectory Reasoning
 
-Q2: The red dot indicate where the green object under the robot gripper should be placed, what action could the robot perform to place it? Choices: A. Close gripper and move up. B. Pick up the object and move lower. C. Pick up the object and move right. D. No action needed. Please answer directly with only the letter of the correct option and nothing else.
+Q2: The red dot indicate where the green object under the robot gripper should be placed, what action could the robot perform to place it? Choices: A. Close gripper from its current position and move up. B. Move down, grab the object, move lower and release. C. Move down, grab the object, move right and release. D. No action needed. Please answer directly with only the letter of the correct option and nothing else.
 Answer: C
 Question type : Action Reasoning
 	

@@ -1,0 +1,62 @@
+	Evaluation on Custoom ERQA Dataset 
+Model used:  gemini-2.5-flash
+Number of examples : 6
+
+--- Example 1 ---
+Question: If the robot gripper picks up the L shaped metal object, what color arrow should the robot follow to place it in the right spot? Choices: A. Blue arrow. B. Yellow arrow. C. Red arrow. D. Black arrow. Please answer directly with only the letter of the correct option and nothing else.
+Question Type: Trajectory Reasoning
+Ground Truth Answer: A
+Number of images: 1
+Visual indices: [0]
+Starting with API key 1
+Content structure: ['Image', "Text: 'If the robot gripper picks up the L shaped metal object, what color arrow should the robot follow to place it in the right spot? Choices: A. Blue arrow. B. Yellow arrow. C. Red arrow. D. Black arrow. Please answer directly with only the letter of the correct option and nothing else.'"]
+Querying Gemini API...
+A
+Successfully used API key 1
+Gemini Response: A
+Response time: 3.96 seconds
+✓ Correct answer (exact match)
+--------------------------------------------------
+
+--- Example 2 ---
+Question: The red dot indicate where the green object under the robot gripper should be placed, what action could the robot perform to place it? Choices: A. Close gripper from its current position and move up. B. Move down, grab the object, move lower and release. C. Move down, grab the object, move right and release. D. No action needed. Please answer directly with only the letter of the correct option and nothing else.
+Question Type: Action Reasoning
+Ground Truth Answer: C
+Number of images: 1
+Visual indices: [0]
+Starting with API key 1
+Content structure: ['Image', "Text: 'The red dot indicate where the green object under the robot gripper should be placed, what action could the robot perform to place it? Choices: A. Close gripper from its current position and move up. B. Move down, grab the object, move lower and release. C. Move down, grab the object, move right and release. D. No action needed. Please answer directly with only the letter of the correct option and nothing else.'"]
+Querying Gemini API...
+C
+Successfully used API key 1
+Gemini Response: C
+Response time: 3.54 seconds
+✓ Correct answer (exact match)
+--------------------------------------------------
+
+--- Example 3 ---
+Question: There are four points marked with letters, which one is closer to the robot gripper, so that the picked object can be placed in its correct fitted place? Choices: A. A. B. B. C. C. D. D. Please answer directly with only the letter of the correct option and nothing else.
+Question Type: Pointing
+Ground Truth Answer: B
+Number of images: 1
+Visual indices: [0]
+Starting with API key 1
+Content structure: ['Image', "Text: 'There are four points marked with letters, which one is closer to the robot gripper, so that the picked object can be placed in its correct fitted place? Choices: A. A. B. B. C. C. D. D. Please answer directly with only the letter of the correct option and nothing else.'"]
+Querying Gemini API...
+C
+Successfully used API key 1
+Gemini Response: C
+Response time: 3.95 seconds
+✗ Incorrect answer (based on exact match)
+--------------------------------------------------
+
+=== Evaluation Summary ===
+Total examples: 3
+Overall accuracy: 66.67% (2/3)
+Single-image accuracy: 66.67% (2/3)
+No multi-image examples processed
+
+--- Accuracy by Question Type ---
+Action Reasoning: 100.00% (1/1)
+Pointing: 0.00% (0/1)
+Trajectory Reasoning: 100.00% (1/1)

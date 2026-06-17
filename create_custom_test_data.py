@@ -3,21 +3,21 @@ import os
 
 examples = [
     {
-        'image_paths': ['data/custom_test-images/q1-image.jpg'],
+        'image_paths': ['data/custom_test_images/q1-image.jpg'],
         'question': "If the robot gripper picks up the L shaped metal object, what color arrow should the robot follow to place it in the right spot? Choices: A. Blue arrow. B. Yellow arrow. C. Red arrow. D. Black arrow. Please answer directly with only the letter of the correct option and nothing else.",
         'question_type': "Trajectory Reasoning",
         'answer': 'A',
         'visual_indices': [0],
     },
     {
-        'image_paths': ['data/custom_test-images/q2-image.jpg'],
-        'question': "The red dot indicate where the green object under the robot gripper should be placed, what action could the robot perform to place it? Choices: A. Close gripper and move up. B. Pick up the object and move lower. C. Pick up the object and move right. D. No action needed. Please answer directly with only the letter of the correct option and nothing else.",
+        'image_paths': ['data/custom_test_images/q2-image.jpg'],
+        'question': "The red dot indicate where the green object under the robot gripper should be placed, what action could the robot perform to place it? Choices: A. Close gripper from its current position and move up. B. Move down, grab the object, move lower and release. C. Move down, grab the object, move right and release. D. No action needed. Please answer directly with only the letter of the correct option and nothing else.",
         'question_type': "Action Reasoning",
         'answer': 'C',
         'visual_indices': [0],
     },
     {
-        'image_paths': ['data/custom_test-images/q3-image.jpg'],
+        'image_paths': ['data/custom_test_images/q3-image.jpg'],
         'question': "There are four points marked with letters, which one is closer to the robot gripper, so that the picked object can be placed in its correct fitted place? Choices: A. A. B. B. C. C. D. D. Please answer directly with only the letter of the correct option and nothing else.",
         'question_type': "Pointing",
         'answer': 'B',
