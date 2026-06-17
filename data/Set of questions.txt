@@ -1,0 +1,13 @@
+Set of test questions
+
+Q1: If the robot gripper picks up the L shaped metal object, what color arrow should the robot follow to place it in the right spot? Choices: A. Blue arrow. B. Yellow arrow. C. Red arrow. D. Black arrow. Please answer directly with only the letter of the correct option and nothing else.
+Answer: A
+Question type : Trajectory Reasoning
+
+Q2: The red dot indicate where the green object under the robot gripper should be placed, what action could the robot perform to place it? Choices: A. Close gripper and move up. B. Pick up the object and move lower. C. Pick up the object and move right. D. No action needed. Please answer directly with only the letter of the correct option and nothing else.
+Answer: C
+Question type : Action Reasoning
+	
+Q3: There are four points marked with letters, which one is closer to the robot gripper, so that the picked object can be placed in its correct fitted place? Choices: A. A. B. B. C. C. D. D. Please answer directly with only the letter of the correct option and nothing else.
+Answer: B
+Question type : Pointing

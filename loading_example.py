@@ -7,8 +7,9 @@ import tensorflow as tf
 from PIL import Image
 import io
 import numpy as np
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
 from PIL import Image
+import os
 
 def parse_example(example_proto):
     """Parse a TFRecord example containing question, image, answer, and metadata."""
@@ -39,7 +40,9 @@ def main():
     dataset = dataset.map(parse_example)
     
     # Number of examples to display
-    num_examples = 3
+    # num_examples = 3  - initial number
+    num_examples = 15  # to get a idea of what the set of pictures look like
+
     
     print(f"Loading first {num_examples} examples from {tfrecord_path}...")
     print("-" * 50)
@@ -61,17 +64,25 @@ def main():
         print(f"Visual indices: {visual_indices}")
 
        
-        
+        # Create directory for saved images
+        save_dir = './data/example_images'
+        os.makedirs(save_dir, exist_ok=True)
+
         # Display image dimensions for each image
         for j, img_encoded in enumerate(images_encoded):
             # Decode the image tensor
             img_tensor = tf.io.decode_image(img_encoded).numpy()
 
-            # TO DO : display the image used in the example
+            # Display the raw images used in the examples
             plt.imshow(img_tensor)
-            plt.title(f" Example {i+1} - Image {j+1}") 
+            plt.title(f" Example {i+1} - Image {j+1}")
             plt.axis('off')
-            plt.show()
+            #plt.show()
+
+            # Save the image to local machine
+            save_path = os.path.join(save_dir, f'example_{i+1}_image_{j+1}.png')
+            plt.savefig(save_path)
+            print(f" Image {j+1} saved to: {save_path}")
 
             print(f" Image {j+1} dimensions: {img_tensor.shape}")
 
